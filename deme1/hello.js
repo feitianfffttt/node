@@ -1,7 +1,5 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //  主页输出 "Hello World"
 app.get('/', function (req, res) {
@@ -23,12 +21,12 @@ app.get('/del_user', function (req, res) {
 })
 
 //  /del_user 页面响应
-app.post('/del_user',urlencodedParser,function (req, res) {
+app.post('/del_user',function (req, res) {
     console.log("/del_user 响应 DELETE 请求");
     res.send('删除页面'+req.url);
  })
 
- 
+
  
 //  /list_user 页面 GET 请求
 app.get('/list_user', function (req, res) {
@@ -44,14 +42,21 @@ app.get('/ab*cd', function(req, res) {
  
 
 
-var server = app.listen(9090, function () {
+// var server = app.listen(9090, function () {
 
  
-  var host = server.address().address
-  var port = server.address().port
-  console.log(server.address)
-  console.log('应用实例，访问地址为 http://'+host+':'+port)
+//   var host = server.address().address
+//   var port = server.address().port
+//   console.log(host)
+//   console.log('应用实例，访问地址为 http://'+host+':'+port)
 
  
-})
+// })
+var http = require('http');
+http.createServer(function (request, response) {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Hello World');
+}).listen(8081);
+
+console.log('Server running at http://127.0.0.1:8081/');
 
