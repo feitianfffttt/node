@@ -27,6 +27,8 @@ app.post('/del_user',urlencodedParser,function (req, res) {
     console.log("/del_user 响应 DELETE 请求");
     res.send('删除页面'+req.url);
  })
+
+ 
  
 //  /list_user 页面 GET 请求
 app.get('/list_user', function (req, res) {
