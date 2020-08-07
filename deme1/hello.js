@@ -42,21 +42,21 @@ app.get('/ab*cd', function(req, res) {
  
 
 
-// var server = app.listen(9090, function () {
+var server = app.listen(9090, function () {
 
  
-//   var host = server.address().address
-//   var port = server.address().port
-//   console.log(host)
-//   console.log('应用实例，访问地址为 http://'+host+':'+port)
+  var host = server.address().address
+  var port = server.address().port
+  console.log(host)
+  console.log('应用实例，访问地址为 http://'+host+':'+port)
 
  
-// })
-var http = require('http');
-http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Hello World');
-}).listen(8081);
+})
+// var http = require('http');
+// http.createServer(function (request, response) {
+//   response.writeHead(200, {'Content-Type': 'text/plain'});
+//   response.end('Hello World');
+// }).listen(8081);
 
-console.log('Server running at http://127.0.0.1:8081/');
+// console.log('Server running at http://127.0.0.1:8081/');
 
