@@ -42,17 +42,17 @@ app.get('/ab*cd', function(req, res) {
 })
  
 
-
-var server = app.listen(9099, '8.210.138.185',function () {
-
- 
-  var host = server.address().address
-  var port = server.address().port
-  console.log(host)
-  console.log('应用实例，访问地址为 http://'+host+':'+port)
+app.listen(19099);
+// var server = app.listen(9099, '8.210.138.185',function () {
 
  
-})
+//   var host = server.address().address
+//   var port = server.address().port
+//   console.log(host)
+//   console.log('应用实例，访问地址为 http://'+host+':'+port)
+
+ 
+// })
 // var http = require('http');
 // http.createServer(function (request, response) {
 //   response.writeHead(200, {'Content-Type': 'text/plain'});
