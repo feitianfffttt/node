@@ -42,8 +42,9 @@ app.get('/ab*cd', function(req, res) {
 })
  
 
-app.listen(19099);
-// var server = app.listen(9099, '8.210.138.185',function () {
+app.listen(3000); //4
+
+// var server = app.listen(9099, 'localhost',function () {
 
  
 //   var host = server.address().address
