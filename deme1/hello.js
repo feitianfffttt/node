@@ -14,6 +14,7 @@ app.post('/', function (req, res) {
    res.send('Hello POST');
 })
  
+
 //  /del_user 页面响应
 app.get('/del_user', function (req, res) {
    console.log("/del_user 响应 DELETE 请求");
