@@ -1,8 +1,6 @@
 var express = require('express');
 var app = express();
 
-
-
 //  主页输出 "Hello World"
 app.get('/', function (req, res) {
    console.log("主页 GET 请求");
@@ -45,7 +43,7 @@ app.get('/ab*cd', function(req, res) {
  
 
 
-var server = app.listen(9099, 'localhost',function () {
+var server = app.listen(9099, '8.210.138.185',function () {
 
  
   var host = server.address().address
